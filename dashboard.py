@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 # Load your data
 # Assuming df is your DataFrame containing the bike rental data
 # Replace this line with your data loading code
-df = pd.read_csv("Bike-sharing-dataset\day.csv")
+df = pd.read_csv("Bike-sharing-dataset/day.csv")
 
 # Function to create the bar plot
 def plot_bar(data, x_label, y_label, title):
