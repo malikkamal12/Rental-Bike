@@ -23,11 +23,38 @@ def plot_bar(data, x_label, y_label, title):
     st.pyplot(fig)
 
 
-# Function to display the main dashboard page
 def show_dashboard():
     st.header("Welcome to the Bike Rental Dashboard")
     st.write("This dashboard allows you to explore bike rental data.")
     st.write("Please select a page from the sidebar.")
+
+    # Add dataset overview
+    st.subheader("Dataset Overview:")
+    st.write("This dataset consists of information about bike sharing rentals recorded over a period of two years. It includes various features such as date, weather conditions, and rental counts.")
+
+    st.subheader("Data Structure:")
+    st.write("- `instant`: Sequential unique identifier for each row.")
+    st.write("- `dteday`: Date of the recorded data.")
+    st.write("- `season`: Season 1; springer 2; summer 3; fall 4; winter")
+    st.write("- `yr`: year (0: 2011, 1:2012)")
+    st.write("- `mnth`: month (1 to 12)")
+    st.write("- `hr`: hour (0 to 23)")
+    st.write("- `holiday`: Binary feature indicating whether it's a holiday or not.")
+    st.write("- `weekday`: Day of the week (0: Sunday, 1: Monday, ..., 6: Saturday).")
+    st.write("- `workingday`: Binary feature indicating whether it's a working day or not.")
+    st.write("- `weathersit`: Weather situation :")
+    st.write("  - 1: Clear, Few clouds, Partly cloudy, Partly cloudy")
+    st.write("  - 2: Mist + Cloudy, Mist + Broken clouds, Mist + Few clouds, Mist")
+    st.write("  - 3: Light Snow, Light Rain + Thunderstorm + Scattered clouds, Light Rain + Scattered clouds")
+    st.write("  - 4: Heavy Rain + Ice Pallets + Thunderstorm + Mist, Snow + Fog")
+    st.write("- `temp`: Normalized temperature in Celsius. The values are divided by 41 (max)")
+    st.write("- `atemp`: Normalized feeling temperature in Celsius. The values are divided by 50 (max)")
+    st.write("- `hum`: Normalized humidity. The values are divided by 100 (max)")
+    st.write("- `windspeed`: Normalized wind speed. The values are divided by 67 (max)")
+    st.write("- `casual`: count of casual users")
+    st.write("- `registered`: count of registered users")
+    st.write("- `cnt`: Total count of bike rentals (casual + registered).")
+
 
 # Function to create the bar plot for average counts by season
 def plot_season_counts(data, title):
